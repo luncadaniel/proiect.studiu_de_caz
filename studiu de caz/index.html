@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GIT / GITHUB — Lucrul în Echipă</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --accent: #22d3ee;
+      --accent2: #34d399;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --border: #334155;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f172a, #1e3a5f);
+      padding: 3rem 1.5rem;
+      text-align: center;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.2rem 1.8rem;
+      text-align: center;
+      min-width: 180px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.6rem;
+      color: var(--accent2);
+    }
+
+    section {
+      margin: 3rem 0;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      border-left: 4px solid var(--accent2);
+      padding-left: 0.8rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+
+    .card h3 {
+      color: var(--accent2);
+      margin-bottom: 0.6rem;
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .step {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      background: var(--accent);
+      color: #0f172a;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    pre, code {
+      background: #0b1220;
+      color: #7dd3fc;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      font-size: 0.9rem;
+    }
+
+    pre {
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 0.8rem 0;
+      border: 1px solid var(--border);
+    }
+
+    .commands {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+    }
+
+    .commands div {
+      margin-bottom: 1rem;
+    }
+
+    .commands span {
+      color: var(--muted);
+      font-size: 0.85rem;
+      display: block;
+      margin-top: 0.2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GIT / GITHUB — Lucrul în Echipă</h1>
+    <p>Importanța Utilizării Aplicațiilor de Lucru în Echipă<br>Lucrul la un proiect comun</p>
+  </header>
+
+  <div class="container">
+    <div class="stats">
+      <div class="stat"><strong>100M+</strong>dezvoltatori</div>
+      <div class="stat"><strong>420M+</strong>repository-uri</div>
+      <div class="stat"><strong>90%</strong>din Fortune 100</div>
+    </div>
+
+    <!-- 01 -->
+    <section>
+      <h2>01 — FUNDAMENTE</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Ce este GIT?</h3>
+          <p>Git este un sistem distribuit de control al versiunilor, creat de Linus Torvalds în 2005. Urmărește fiecare modificare a codului sursă, permițând colaborarea simultană a mai multor developeri fără conflicte nerezolvate.</p>
+        </div>
+        <div class="card">
+          <h3>Ce este GitHub?</h3>
+          <p>GitHub este o platformă cloud de găzduire a repository-urilor Git, cu funcționalități avansate de colaborare: pull requests, code review, issues, Actions CI/CD și o rețea socială pentru developeri.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 -->
+    <section>
+      <h2>02 — FLUXUL DE LUCRU ÎN ECHIPĂ</h2>
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h3>Fork & Clone</h3>
+          <p>Fiecare membru al echipei creează o copie locală a repository-ului. Modificările personale nu afectează codul principal până la aprobare.</p>
+          <pre>git clone https://github.com/org/proiect.git</pre>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h3>Branch — Izolarea Funcționalităților</h3>
+          <p>Fiecare feature sau bugfix se dezvoltă pe un branch separat. Astfel, ramura principală (main) rămâne stabilă și funcțională în permanență.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h3>Pull Request & Code Review</h3>
+          <p>Modificările propuse sunt revizuite de colegi înainte de integrare. Procesul de code review îmbunătățește calitatea codului și transferă cunoștințe în echipă.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <h3>Merge & Deploy</h3>
+          <p>După aprobare, codul este integrat în ramura principală. GitHub Actions poate declanșa automat testele și deployment-ul în producție.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 -->
+    <section>
+      <h2>03 — DE CE CONTEAZĂ</h2>
+      <div class="grid">
+        <div class="card"><h3>🔒 Siguranța Codului</h3><p>Nicio modificare nu se pierde. Istoricul complet permite revenirea la orice versiune anterioară în câteva secunde.</p></div>
+        <div class="card"><h3>⚡ Productivitate Sporită</h3><p>Zeci de developeri pot lucra simultan pe același proiect, fiecare pe branch-ul propriu, fără să se blocheze reciproc.</p></div>
+        <div class="card"><h3>👁️ Transparență Totală</h3><p>Fiecare commit înregistrează cine, ce și de ce a modificat. Responsabilitatea este distribuită și vizibilă.</p></div>
+        <div class="card"><h3>🔁 CI/CD Automatizat</h3><p>GitHub Actions automatizează testarea și livrarea. Fiecare push poate declanșa un pipeline complet.</p></div>
+        <div class="card"><h3>🌍 Colaborare Remote</h3><p>Echipele distribuite global lucrează eficient. Fusul orar nu mai este o barieră.</p></div>
+        <div class="card"><h3>📚 Documentare Implicită</h3><p>Mesajele de commit, issue-urile și pull request-urile formează o documentație vie a proiectului.</p></div>
+      </div>
+    </section>
+
+    <!-- 04 -->
+    <section>
+      <h2>04 — COMENZI ESENȚIALE</h2>
+      <div class="commands">
+        <div><code>git init</code><span>Inițializează un repository nou</span></div>
+        <div><code>git clone &lt;url&gt;</code><span>Clonează un repository existent</span></div>
+        <div><code>git branch feature/x</code><span>Creează un branch nou</span></div>
+        <div><code>git checkout -b feature/x</code><span>Creează și trece pe branch nou</span></div>
+        <div><code>git add .</code><span>Adaugă toate modificările în staging</span></div>
+        <div><code>git commit -m "mesaj"</code><span>Salvează un snapshot al modificărilor</span></div>
+        <div><code>git push origin feature/x</code><span>Trimite modificările pe server</span></div>
+        <div><code>git pull origin main</code><span>Actualizează codul local cu serverul</span></div>
+        <div><code>git merge feature/x</code><span>Integrează branch-ul în ramura curentă</span></div>
+        <div><code>git log --graph --oneline</code><span>Vizualizează istoricul grafic</span></div>
+      </div>
+    </section>
+
+    <!-- 05 -->
+    <section>
+      <h2>05 — ADOPȚIE GLOBALĂ & IMPACT</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Utilizare Git în industrie</h3>
+          <p>Companii Fortune 500 — <strong style="color:var(--accent2)">94%</strong><br>
+             Developeri profesioniști — <strong style="color:var(--accent2)">87%</strong><br>
+             Proiecte open-source — <strong style="color:var(--accent2)">99%</strong></p>
+        </div>
+        <div class="card">
+          <h3>Impactul Code Review</h3>
+          <p><strong style="color:var(--accent2)">-75%</strong> reducerea bug-urilor<br>
+             <strong style="color:var(--accent2)">+40%</strong> viteză de onboarding<br>
+             <strong style="color:var(--accent2)">3.5×</strong> mai puține regresii</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 -->
+    <section>
+      <h2>06 — BUNE PRACTICI</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>✍️ Mesaje de commit clare</h3>
+          <p>✗ <code>git commit -m "fix"</code><br>
+             ✓ <code>git commit -m "fix: rezolvă eroarea 404 la logout"</code></p>
+        </div>
+        <div class="card">
+          <h3>🌿 Denumire branch-uri</h3>
+          <p>feature/autentificare-oauth<br>
+             fix/eroare-import-csv<br>
+             hotfix/vulnerabilitate-xss<br>
+             docs/actualizare-readme</p>
+        </div>
+        <div class="card">
+          <h3>🔄 Commit-uri atomice</h3>
+          <p>Fiecare commit trebuie să conțină o singură modificare logică. Evitați commit-uri uriașe ce combină zeci de schimbări necorelate.</p>
+        </div>
+        <div class="card">
+          <h3>🛡️ Protejați branch-ul main</h3>
+          <p>Configurați branch protection rules pe GitHub: minim 1 aprobare, teste CI trecute, fără push direct pe main.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    Studiu de Caz — Importanța GIT / GitHub în lucrul în echipă<br>
+    Realizat cu Git &amp; GitHub Pages
+  </footer>
+</body>
+</html>
